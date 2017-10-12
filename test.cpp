@@ -1,17 +1,27 @@
 
-
 #include "Encryption/IceCrypt.cpp"
 #include <iostream>
 
 using namespace std;
 
-int main()
+int main(int argc, char const *argv[])
 {
-	const char* encrypted = "==QZkNmYhZwDSsQFItQCOYAC";
-	const char* key		= "ice";
-	cout << "Decrypted data : " << (decrypt(encrypted, key)) << endl << endl;
+	const char* input 		= "Hello world";
+	const char* key   		= "mytea123";
 
-	
-	const char* input = "hello world";
-	cout << "Encrypted data : " << (encrypt(input, key)) << endl;
+	string encrypted = encrypt(input, key);
+	cout << "Encrypted Data : " << encrypted << endl;
+
+
+	// Comment out Flag B and uncomment this declaration to get the real test.
+	// const char* encrypted_data = encrypted.c_str();
+
+
+	// Flag B (Provided encrypted data).
+	const char* encrypted_data= "A0P7czLTo3aTGZpsM1E6Yp"; // Hello world
+
+
+	string decrypted = decrypt(encrypted_data, key);
+	cout << "Decrypted Data : " << decrypted << endl;
+	return 0;
 }
