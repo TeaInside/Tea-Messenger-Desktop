@@ -5,8 +5,9 @@
  */
 
 #include <sys/time.h>
-#include "../lib/base64/base64.h"
-#include "../lib/base64/base64.cpp"
+#include "lib/base64/base64.h"
+
+namespace IceCrypt {
 
 static inline std::string strrev(std::string str);
 static inline std::string str_replace(const std::string search, const std::string replace, std::string subject);
@@ -49,3 +50,11 @@ static inline std::string str_replace(const std::string search, const std::strin
     subject = buffer;
     return subject;
 }
+
+class Auth {
+public:
+    static std::string encrypt( const char* data, const char* authKey );
+    static std::string decrypt( const char* data, const char* authKey );
+};
+
+};

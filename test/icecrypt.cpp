@@ -1,5 +1,5 @@
 
-#include "Encryption/IceCrypt.cpp"
+#include "src/icecrypt/Auth.h"
 #include <iostream>
 
 using namespace std;
@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 	const char* input 		= "Hello world";
 	const char* key   		= "mytea123";
 
-	string encrypted = encrypt(input, key);
+	string encrypted = IceCrypt::Auth::encrypt(input, key);
 	cout << "Encrypted Data : " << encrypted << endl;
 
 
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	const char* encrypted_data= "A0P7czLTo3aTGZpsM1E6Yp"; // Hello world
 
 
-	string decrypted = decrypt(encrypted_data, key);
+	string decrypted = IceCrypt::Auth::decrypt(encrypted_data, key);
 	cout << "Decrypted Data : " << decrypted << endl;
 	return 0;
 }
