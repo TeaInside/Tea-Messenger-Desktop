@@ -38,8 +38,8 @@ int main( int argc, char *argv[] ) {
     if( teaMessenger.isLoggedIn() ) {
         teaMessenger.showChatWindow();
     } else {
-    }
         teaMessenger.showIntroScreen();
+    }
 
     return teaMessenger.exec();
 };
