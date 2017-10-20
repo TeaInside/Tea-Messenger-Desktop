@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file alias="Lato-Black">../resources/Lato-Black.ttf</file>
+    <file alias="Lato-Hairline">../resources/Lato-Hairline.ttf</file>
+    <file alias="Lato-Light">../resources/Lato-Light.ttf</file>
+
+    <file alias="Icon-App">../resources/images/icons/app.ico</file>
+    <file alias="Icon-Logo">../resources/images/icons/logo.png</file>
+
+    <file alias="BG-Intro">../resources/images/bg/intro.png</file>
+</qresource>
+</RCC>
